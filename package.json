@@ -1,0 +1,16 @@
+{
+  "name": "@pavele/useaxios",
+  "version": "1.0.0",
+  "description": "Axios hook for react developers to easly handle REST API",
+  "main": "index.js",
+  "repository": "https://github.com/pavelee/useaxios.git",
+  "author": "Paweł Ciosek <ciosek.pawel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  }
+}
