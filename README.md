@@ -15,6 +15,12 @@ yarn
 yarn add @pavele/useaxios
 ```
 
+## Axios
+
+Popular and reliable request library for js projects
+
+Read more here: [axios docs](https://axios-http.com/docs/intro)
+
 ## Simple usage
 
 ```
@@ -28,14 +34,51 @@ const MyCoolComponent = (props) => {
         (loading) => { console.log(loading) } // optional, define what should happen on loading state
     );
 
-    conse makeRequest() => {
+    const makeRequest() => {
         // let's execute request
         request(
             {
                 url: 'http://myapiaddress.com
-            } // we pass axios params
+            } // we pass axios params, use offical axios docs for more details
         );
     }
+}
+
+```
+
+## Case when you need to handle more than one request to API in a single component
+
+Common case when you have a one component with few features that require to communicate with API
+
+Let's assume you have a component that allow to save or remove resource from API
+
+We can define more than one hook, but we need to rename imported variables from hooks.
+
+```
+import { useAxios } from '@pavele/useaxios';
+
+const MyCoolComponent = (props) => {
+    const { request: saveRequest, response: saveResponse, error: saveError, loading: saveLoading } = useAxios();
+    const { request: removeRequest, response: removeResponse, error: removeError, loading: removeLoading } = useAxios();
+
+    const saveResource(id, data) => {
+        request(
+            {
+                url: `http://myapiaddress.com/myresource/${id}`,
+                method: 'POST',
+                data: data
+            }
+        );
+    }
+
+    const removeResource(id) => {
+        request(
+            {
+                url: `http://myapiaddress.com/myresource/${id}`,
+                method: 'DELETE'
+            }
+        );
+    }    
 }
 
 ```
