@@ -17,7 +17,7 @@ yarn add @pavele/useaxios
 
 ## Axios
 
-Popular and reliable request library for js projects
+It's popular and reliable request library for js projects
 
 Read more here: [axios docs](https://axios-http.com/docs/intro)
 
@@ -50,7 +50,7 @@ const MyCoolComponent = (props) => {
 
 Common case when you have a one component with few features that require to communicate with API
 
-Let's assume you have a component that allow to save or remove resource from API
+Let's assume you have a component that allow to save or remove a resource from API
 
 We can define more than one hook, but we need to rename imported variables from hooks.
 
