@@ -1,6 +1,6 @@
 {
   "name": "@pavele/useaxios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Axios hook for react developers to easly handle REST API",
   "main": "index.js",
   "repository": "https://github.com/pavelee/useaxios.git",
